@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12"><br>
+            <h1 class="text-center"> Tipo de servicios que ofrece la empresa</h1>
+
+
+            <div class="row">
+                <div *ngFor="let tecnico of solicitudes_formulario" class="col-md-4 pb-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="text-center">{{tecnico.nombre}} </h5>
+                            <img *ngIf="tecnico.nombre == 'Mantenimiento Preventivo PC'" src="assets/123213.jpg" class="card-img-top">
+                            <img *ngIf="tecnico.nombre == 'Formateo PC'" src="assets/}2135788725187251.jpg" class="card-img-top">
+                            <img *ngIf="tecnico.nombre == 'Optimizacion PC'" src="assets/828282-.jpg" class="card-img-top">
+                            <p class="card-text">Descripcion: {{tecnico.descripcion}}</p>
+                            <p class="card-text">valor: ${{tecnico.valor}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
